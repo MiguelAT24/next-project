@@ -1,4 +1,4 @@
-import { getSession } from "next-auth/react"
+import { getSession, signOut } from "next-auth/react"
 
 function homepage({session}) {
 
@@ -14,6 +14,9 @@ function homepage({session}) {
             <p>Skeleton</p>
         )
 }
+<button onClick={() => signOut()}>
+  Logout
+</button>
     </div>
   );
   
